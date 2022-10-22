@@ -13,9 +13,9 @@ body {
   box-sizing: border-box; 
   overflow-x:hidden;
 
-  scroll-behavior:auto;
 }
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 .container {
