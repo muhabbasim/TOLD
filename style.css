@@ -645,6 +645,7 @@ li{
     
     background-color: rgb(233, 221, 206); 
     position: fixed;
+    opacity: 1;
   }
   .flag-motion {
     display: none;
@@ -664,7 +665,6 @@ li{
     height: 100vh;
     transition: 1s ease;
     transform: translateX(100%);
-    opacity: .9;
   }
   .links a {
     color: rgb(0, 0, 0);
