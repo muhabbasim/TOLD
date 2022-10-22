@@ -1,0 +1,790 @@
+@font-face {
+  font-family: stol book;
+  src: url(font/Stolzl\ Book.otf);
+}
+@font-face {
+  font-family: stol light;
+  src: url(font/Stolzl\ Light.otf);
+}
+body {
+  font-family: stol light;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  overflow-x:hidden;
+
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.container {
+  min-height: 100vh;
+  background-color: rgb(233, 221, 206);
+}
+nav {
+  height: 70px; 
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 30px;
+  margin-top: -30px;
+}
+.logo {
+  font-size: 40px;
+  font-family: stol book;
+  transition: 1s ease;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.logo a {
+  text-decoration: none;
+  color: rgb(70, 68, 68);
+}
+.logo a:hover {
+  color: rgb(93, 125, 106);
+}
+.flag-motion {
+  width: 80px;
+  height: 45px;
+  align-items: flex-start;
+  overflow: hidden;
+  border-radius: 50px;
+  background-color: aquamarine;  
+  margin-left: 10px;
+}
+.flag {
+  width: 160px;
+  height: 45px;
+  border-radius: 50px;
+  transform: translateX(-80px);
+  transition: .5s ease;
+  object-fit: fill;
+}
+.flag-motion:hover .flag {
+  transform: translateX(0px);
+}
+
+.links {
+  width: 400px; 
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: 20%;
+  margin-right: 20px;
+  z-index: 10;
+}
+.links a {
+  color: black;
+  font-family: stol book;
+  font-size: 16px;
+  text-decoration: none;
+  padding-right: 15px;
+  text-align: center;
+  transition: .5s ease;
+  z-index: 10;
+}
+.burger-menu {
+  width: 30px;
+  height: 30px;
+  display: none;
+  transition: .5s ease;
+  z-index: 100;
+}
+.burger-menu:hover {
+  fill: rgb(255, 255, 255);
+}
+li{
+  list-style: none;
+}
+/* -------- end of the header -------- */
+
+.tells {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 50%;
+  margin-right: 60px;
+}
+.hello {
+  padding-top: 100px;
+  font-size: 90px;
+  font-family: stol book;
+  transition: 1s ease;
+
+}
+.paragraph {
+  max-width: 500px;
+  font-family: stol light;
+  margin-bottom: 70px;
+}
+
+/* --------------- img slide start --------------------*/
+
+.slider {
+  width: 1590px;
+  height: 650px;
+  border-radius: 10px;
+}
+.slides {
+  width: 1590px;
+  height: 650px;
+  display: flex;
+  overflow: hidden;
+}
+.slides input {
+  display: none;
+}
+.slide {
+  width: 100%;
+  transition: 2s;
+}
+.slides img {
+  width: 1590px;
+  height: 650px;
+  object-fit: cover;
+  transition: 1s ease;
+}
+/*  manual navigation  */
+.navigation-manual {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin-top: -60px;
+}
+.manual-btn {
+  border: 2px solid rgb(233, 221, 206);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .5s;
+}
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+.manual-btn:hover {
+  background: rgb(43, 41, 41);
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+#radio2:checked ~ .first{
+  margin-left: -100%; 
+}
+#radio3:checked ~ .first{
+  margin-left: -200%;
+}
+
+/* automatic navigation */
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 300px;
+  justify-content: center;
+  margin-top: 590px;
+}
+.navigation-auto div{
+  border: 2px solid rgb(233, 221, 206);
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: rgb(233, 221, 206);
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: rgb(233, 221, 206);
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: rgb(233, 221, 206);
+}
+/* --------------- img slide end --------------------*/
+
+.project .lp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  --margin-top: 30px;  
+  align-content: center;
+}
+.industry {
+  margin-left: 30px;
+}
+.industry h3 {
+  max-width: 320px;
+  font-size: 30px;
+  font-family: stol light;
+}
+.industry h4 {
+  font-size: 10px;
+  font-family: stol light;
+}
+.btn {
+  position: relative;
+  width: 130px;
+}
+.button {
+  background-color: black;
+  text-decoration: none;
+  color: rgb(233, 221, 206);
+  padding: 10px 30px;
+  margin-top: 30px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  width: 80px;
+  transition: .3s ease;
+  overflow: hidden;
+  padding-left: 15px;
+}
+.btn-dot {
+  background-color:  rgb(233, 221, 206);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: .3s ease;
+  position: absolute;
+  top: 43px;
+  right: 15px;
+  pointer-events: none;
+}
+.button:hover {
+  width: 92px;
+}
+.active-dot {
+  right: 10px;
+  height: 14px;
+  width: 14px;
+  transform: translate(50%, -20%);
+}
+/* -------- end of about -------- */
+
+.reveal {
+  opacity: 0;
+  transition:  all 2s ease;
+  transform: translateY(150px);
+}
+.vid {
+  width: 100%;  
+  object-fit: fill;
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* -------- end of project -------- */
+
+.service-title {
+  font-size: 55px;
+  font-family: stol book;
+  padding-top: 100px;
+  transition: 1s ease;
+}
+.service-title h1{
+  margin-left: 40px;
+}
+.line {
+  height: 1px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: rgb(181, 181, 181);
+}
+.the-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 50px;
+  margin-bottom: 30px;
+}
+.line-h3 {
+  font-size: 15px;
+  max-width: 400px;
+  margin-left: 24%;
+
+}
+.key{
+  background-color: black;
+  height: 40px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.minus1 {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  transform: translate(50%, 50%);
+  transition: .4s ease;
+}
+.plus1 {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  transform: translate(-50%, 50%) rotate(180deg);
+  transition: .2s ease;
+}
+.key:hover .minus1 {
+  transform: translate(50%, 50%) rotate(-90deg);
+}
+.key:hover .plus1 {
+  transform: translate(-50%, 50%);
+}
+.minus {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  transform: translate(50%, 50%) rotate(-90deg);
+  transition: .4s ease;
+}
+.plus {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  transform: translate(-50%, 50%);
+  transition: .2s ease;
+}
+.key:hover .minus {
+  transform: translate(50%, 50%);
+}
+.key:hover .plus {
+  transform: translate(-50%, 50%) rotate(180deg);
+}
+
+.btn-container {
+  margin-top: 20px;
+  margin-left: 50%;
+
+}
+/* -------- end of service -------- */
+.team .tells {
+  padding-top: 150px;
+}
+.team h1 {
+  padding-top: 100px;
+  font-size: 90px;
+  font-family: stol book;
+}
+.team img {
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 150px;
+
+}
+/* -------- end of team -------- */
+
+.in-line {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.in-line h2 {
+  margin-left: 50px;
+}
+.in-line h3 {
+  max-width: 400px;
+  margin-right: 50px;
+}
+.footer {
+  margin-top: 300px;
+  padding-bottom: 50px;
+}
+
+/* ---------- labtop size media ----------*/
+@media screen and (max-width: 1200px){
+  
+  .slider {
+    width: 1200px;
+    height: 550px;
+    border-radius: 10px;
+
+  }
+  .slides {
+    width: 1200px;
+    height: 550px;
+    display: flex;
+    overflow: hidden;
+  }
+  .slides img {
+    width: 1200px;
+    height: 550px;
+    object-fit: cover;
+
+  }
+
+  .service-title {
+    font-size: 45px;
+    font-family: stol book;
+    padding-top: 80px;
+    transition: 1s ease;
+  }
+}
+
+/* ---------- var hover effect on large size media  ----------*/
+@media screen and (min-width: 768px){
+  .links a:hover {
+    color: rgb(91, 138, 73);
+    animation: qiwi 1s forwards;
+  }
+}
+
+/* ---------- tablet size media ----------*/
+@media screen and (max-width: 768px){
+  .container {
+    min-height: 100vh;
+    background-color: rgb(233, 221, 206);
+  }
+  nav {
+    height: 80px; 
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 30px;
+    margin-top: -0px;  
+
+    position: fixed;
+    background-color: rgb(233, 221, 206);
+
+    width: 92%;
+    height: 60px;
+    z-index: 10;
+    opacity: .9;
+  }
+  .logo {
+    font-size: 30px;
+    font-family: stol book;
+    width: 70px;
+    transition: 1s ease;
+    
+  }
+  .flag-motion {
+    width: 80px;
+    height: 45px;
+    align-items: flex-start;
+    overflow: hidden;
+    border-radius: 50px;
+    background-color: aquamarine;  
+  }
+  .flag {
+    width: 160px;
+    height: 45px;
+    border-radius: 50px;
+    transform: translateX(-80px);
+    transition: .5s ease;
+    object-fit: fill;
+  }
+  .flag-motion:hover .flag {
+    transform: translateX(0px);
+  }
+  
+  .links {
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 100px;
+    transition: 1s ease;
+  }
+  .links a {
+    color: black;
+    font-family: stol light;
+    font-size: 13px;
+    text-decoration: none;
+    padding-right: 25px;
+    text-align: center;
+  }
+  .links a:hover {
+    color: rgb(255, 255, 255);
+    animation: qiwi-middle 1s forwards;
+  }
+
+  /* section 1 */
+  .hello {
+    padding-top: 100px;
+    font-size: 60px;
+    font-family: stol book;
+    transition: 1s ease;
+  }
+  .paragraph {
+    max-width: 500px;
+    font-family: stol light;
+    font-size: 16px;
+  }
+
+  /* slide img */
+  .slider {
+    width: 750px;
+    height: 450px;
+    border-radius: 10px;
+
+  }
+  .slides {
+    width: 750px;
+    height: 450px;
+    display: flex;
+    overflow: hidden;
+  }
+  .slides img {
+    width: 750px;
+    height: 650px;
+    object-fit: cover;
+
+  }
+
+  .industry h3 {
+    max-width: 210px;
+    font-size: 20px;
+    font-family: stol light;
+  }
+  .industry h4 {
+    font-size: 13px;
+    font-family: stol light;
+  }
+
+  /* --- end of project - */
+  .service-title {
+    font-size: 35px;
+    font-family: stol book;
+    padding-top: 80px;
+    transition: 1s ease;
+  }
+  .service-title h1{
+    margin-left: 40px;
+  }
+  .line {
+    height: 1px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgb(181, 181, 181);
+  }
+  .the-line {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 50px;
+    margin-bottom: 20px;
+  }
+  .line-h3 {
+    font-size: 14px;
+    max-width: 400px;
+    margin-left: 24%;
+  }
+  .the-line h2 {
+    font-size: 17px;
+    font-family: stol book;
+  }
+
+  /* --end of service --- */
+  .team .tells {
+    padding-top: 50px;
+  }
+  .team h1 {
+    padding-top: 100px;
+    font-size: 60px;
+    font-family: stol book;
+  }
+ 
+  /* -- get in touch--- */
+
+  .contact h1 {
+    font-size: 40px;
+    transition: 1s ease;
+  }
+  .contact h2 {
+    font-size: 20px;
+  }
+  .contact h3 {
+    font-size: 18px;
+  }
+  .in-line h2 {
+    margin-left: 50px;
+    max-width: 250px;
+    font-size: 18px;
+  }
+  .in-line h3 {
+    max-width: 250px;
+    margin-right: 50px;
+    font-size: 18px;
+  }
+  .footer {
+    margin-top: 120px;
+    padding-bottom: 30px;
+  }
+  
+}
+
+/* ---------- phone size media ----------*/
+@media screen and (max-width: 600px){
+  .container {
+    min-height: 100vh;
+    background-color: rgb(233, 221, 206);
+  }
+  nav {
+    height: 80px; 
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 30px;
+    margin-top: -1px;
+    
+    background-color: rgb(233, 221, 206); 
+    position: fixed;
+    opacity: 1;
+  }
+  .flag-motion {
+    display: none;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: 1s ease;
+    
+    background-color: rgb(205, 188, 167);
+    position: absolute;
+    top: -15px;
+    right: 1px;
+    left: -125px;
+    width: 100%;
+    height: 100vh;
+    transition: 1s ease;
+    transform: translateX(100%);
+  }
+  .links a {
+    color: rgb(0, 0, 0);
+    font-family: stol book;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .links a:hover {
+    color: rgb(255, 255, 255);
+    animation: qiwi-mini 1s forwards;
+  }
+  .burger-menu {
+    fill: rgb(14, 14, 14);
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 100;
+    margin-right: 20px;
+  }
+
+  .tells {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0%;
+    margin-right: 60px;
+    margin-left: 60px;
+  }
+  .hello {
+    padding-top: 100px;
+    font-size: 60px;
+    font-family: stol book;
+    transition: 1s ease;
+  
+  }
+  .paragraph {
+    max-width: 500px;
+    font-family: stol light;
+    font-size: 15px;
+    margin-bottom: 70px;
+    text-align: center;
+  }
+
+  /* slide img */
+  .slider {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+
+  }
+  .slides {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    overflow: hidden;
+  }
+  .slides img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+  }
+  .project .lp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;  
+    align-content: center;
+  }
+  .industry {
+    margin-left: 30px;
+  }
+  .industry h3 {
+    max-width: 150px;
+    font-size: 15px;
+    font-family: stol light;
+  }
+  .service-title {
+    font-size: 30px;
+  }
+  .line-h3 {
+    font-size: 10px;
+    max-width: 200px;
+    margin-left: 5%;
+  }
+  .the-line h2 {
+    font-size: 15px;
+  }
+  .in-line h2 {
+    margin-left: 50px;
+    font-size: 15px;
+  }
+  .in-line h3 {
+    max-width: 400px;
+    margin-right: 50px;
+    font-size: 12px;
+  }
+}
+
+/*-------- kdy frames ------*/
+@keyframes qiwi {
+  70% {
+    font-size: 20px;
+  }
+}
+@keyframes qiwi-middle {
+  70% {
+    font-size: 18px;
+  }
+}
+@keyframes qiwi-mini {
+  70% {
+    font-size: 30px;
+  }
+}
+
+
+/*-------- classLists ------*/
+.active {
+  transform: translateX(0px);
+}
